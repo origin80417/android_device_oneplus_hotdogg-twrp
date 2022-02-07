@@ -21,7 +21,10 @@ LOCAL_PATH := device/oneplus/hotdogg
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
+    dtbo \
     system \
+    system_ext \
+    vbmeta \
     vendor
 
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -36,10 +39,26 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
     android.hardware.boot@1.0-service
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 PRODUCT_PACKAGES += \
     bootctrl.msmnile \
     bootctrl.msmnile.recovery
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd \
+    resetprop
+
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
+# tzdata
+PRODUCT_PACKAGES_ENG += \
+    tzdata_twrp
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -47,3 +66,8 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+PRODUCT_COPY_FILES += \
+    $(OUT_DIR)/target/product/hotdogg/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+
+RECOVERY_LIBRARY_SOURCE_FILES += \ $(TARGET_OUT_SHARED_LIBRARIES)/libion.so

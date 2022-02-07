@@ -16,12 +16,6 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # Inherit from OnePlus7TProNR device
 $(call inherit-product, device/oneplus/hotdogg/device.mk)
 
@@ -32,6 +26,5 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_DEVICE := hotdogg
 PRODUCT_NAME := aosp_hotdogg
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := OnePlus
+PRODUCT_MODEL := HD1925
 PRODUCT_MANUFACTURER := oneplus
-PRODUCT_RELEASE_NAME := OnePlus OnePlus
