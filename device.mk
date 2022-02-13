@@ -1,7 +1,7 @@
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-LOCAL_PATH := device/oneplus/hotdog
+LOCAL_PATH := device/oneplus/hotdogg
 
 # define hardware platform
 PRODUCT_PLATFORM := msmnile
@@ -18,7 +18,7 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vendor \
     vbmeta \
-		dtbo
+	dtbo
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -75,5 +75,4 @@ PRODUCT_COPY_FILES += \
 
 # OEM otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/security/oneplus \
-    $(LOCAL_PATH)/security/pixelexperience \
+    $(LOCAL_PATH)/security/oneplus
