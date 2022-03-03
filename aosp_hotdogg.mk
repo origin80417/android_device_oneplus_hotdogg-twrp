@@ -18,13 +18,14 @@
 
 # Inherit from OnePlus7TProNR device
 $(call inherit-product, device/oneplus/hotdogg/device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit some common PBRP stuff.
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hotdogg
-PRODUCT_NAME := aosp_hotdogg
+PRODUCT_NAME := twrp_hotdogg
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := HD1925
 PRODUCT_MANUFACTURER := oneplus
