@@ -16,6 +16,8 @@
 # limitations under the License.
 #
 
+MAINTAINER := origin80417
+
 DEVICE_PATH := device/oneplus/hotdogg
 
 # For building with minimal manifest
@@ -24,7 +26,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI := arm64-v8a 
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 
@@ -130,6 +132,7 @@ PLATFORM_SECURITY_PATCH := $(VENDOR_SECURITY_PATCH)
  BOARD_USES_QCOM_FBE_DECRYPTION := true
 
 # TWRP Configuration
+TW_USE_LZMA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
