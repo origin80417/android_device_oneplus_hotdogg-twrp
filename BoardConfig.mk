@@ -16,8 +16,6 @@
 # limitations under the License.
 #
 
-MAINTAINER := origin80417
-
 DEVICE_PATH := device/oneplus/hotdogg
 
 # For building with minimal manifest
