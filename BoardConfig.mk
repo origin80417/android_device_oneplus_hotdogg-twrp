@@ -23,6 +23,28 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
+# SHRP Build Flags
+SHRP_DEVICE_CODE := hotdogg
+SHRP_PATH := device/oneplus/$(SHRP_DEVICE_CODE)
+SHRP_MAINTAINER := origin80417
+SHRP_DEVICE_TYPE := A/B
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usbstorage
+SHRP_FLASH := 1
+SHRP_AB := true
+SHRP_STATUSBAR_RIGHT_PADDING := 48
+SHRP_STATUSBAR_LEFT_PADDING := 48
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
+SHRP_DARK := true
+INC_IN_REC_ADDON_1 := true
+INC_IN_REC_ADDON_2 := true
+INC_IN_REC_ADDON_3 := true
+INC_IN_REC_ADDON_4 := true
+INC_IN_REC_MAGISK := true
+
 DEVICE_PATH := device/oneplus/hotdogg
 
 # For building with minimal manifest
