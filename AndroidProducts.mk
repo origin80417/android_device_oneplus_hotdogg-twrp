@@ -17,4 +17,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/aosp_hotdogg.mk
+     $(LOCAL_DIR)/twrp_hotdogg.mk
+     
+COMMON_LUNCH_CHOICES := \
+     twrp_hotdogg-userdebug \
+     twrp_hotdogg-eng \
+     
