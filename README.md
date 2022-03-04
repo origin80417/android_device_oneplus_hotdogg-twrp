@@ -1,5 +1,4 @@
-# Device Tree for OnePlus 7T Pro aka hotdogg for TWRP (this should be unified with 7T, but I cannot test since I do not own that device)
-## Disclaimer - Unofficial TWRP!
+# Device Tree for OnePlus 7T Pro 5gb McLaren aka hotdogg for TWRP ## Disclaimer - Unofficial TWRP!
 These are personal test builds of mine, experimenting with further development of this device. In no way do I hold responsibility if it/you brick your device.
 Proceed at your own risk because I am doing the same, so make a backup and have a msmtool ready to use if necessary
 
